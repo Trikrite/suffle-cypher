@@ -1,5 +1,8 @@
 #A PROGRAM NEM SZERETI A SPACE!!!
 
+kurvaanyad=input()
+szamkurvaanyad=int(kurvaanyad)
+
 def split(word):
     return [char for char in word]
 fasz = ""
@@ -53,9 +56,9 @@ for i in range(len(ass)):
     i2 = i
     text = ass[i]
     if listcode[i]=="-":
-        anyad.append(minusencrypt(ass[i],-6))
+        anyad.append(minusencrypt(ass[i],-(szamkurvaanyad)))
     elif listcode[i]=="+":
-        anyad.append(plusencrypt(ass[i],6))
+        anyad.append(plusencrypt(ass[i],szamkurvaanyad))
     else:
         exit()
 for i in range(len(anyad)):
